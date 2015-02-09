@@ -1,10 +1,12 @@
 # dotmake
 
-Meta-framework for software projects
+Meta-framework for software projects.
+
+Orchestration of your build tools, CI and test runners, with easy scaffolding to tap into a library of testing and definition-of-done recipes. Declarative. Stack-agnostic. Product manager and QA oriented.
 
 ## `.make.yml` Format
 
-Describes the attributes of a project.
+Describes the attributes of a project, which include dependencies, CI implementation details and the definition of done.
 
 There is definitive description of each part of the actual codebase, easily finding things that don't fit (like a linter).
 
@@ -12,7 +14,7 @@ There is definitive description of each part of the actual codebase, easily find
 
 Projects don't typically need intrinsic identifiers, but there is always a need for an external reference mechanism to publish built artifacts, etc.
 
-### Software Artifact Definition
+### Definition of Done
 
 What is shipped is always an "executable". But that definition includes *installers*. Or things with clear install-recipes. Or manual instructions, acting like code for a person following a set of steps. So, a Debian package, a Java servlet bundle, a Rails app, a set of documentation, etc. Some things have implicit installer behaviour (such as Heroku deploys), some things are more explicit.
 
