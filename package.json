@@ -1,0 +1,12 @@
+{
+  "name": "dotmake-example",
+  "version": "0.0.0",
+  "description": "DotMake example project setup",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "~2.9.8",
+    "gulp-jshint": "~1.9.2",
+    "gulp": "~3.8.11",
+    "event-stream": "~3.2.2"
+  }
+}
