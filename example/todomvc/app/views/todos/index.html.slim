@@ -1,0 +1,29 @@
+section#todoapp
+  header#header
+    h1 todos
+
+    / create new todos
+    = render 'new_todo_form'
+
+  section#main
+    / mark all todos as complete
+    = link_to '', toggle_all_todos_path, method: :post, remote: true, id: 'toggle-all'
+
+    / todo list
+    = content_tag :ul, id: 'todo-list' do
+      = render @todos
+
+  footer#footer
+    / active todos count (placeholder)
+    span#active-todos-count
+
+    / filter by completed
+    ul#filters
+      li = selected_link_to 'All', todos_path, remote: true
+      li = selected_link_to 'Active', active_todos_path, remote: true
+      li = selected_link_to 'Completed', completed_todos_path, remote: true
+
+    / destroy completed todos
+    = link_to destroy_completed_todos_path, method: :delete, remote: true, id: 'clear-completed', class: 'hidden' do
+      ' Clear completed
+      span#completed-todos-count

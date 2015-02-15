@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="rails">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="ROBOTS" content="NOODP" />
+    <title>Rails • TodoMVC</title>
+    <%= stylesheet_link_tag :application, :media => 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= yield %>
+    <%= render 'footer' %>
+    <%= render 'javascript' %>
+  </body>
+</html>
