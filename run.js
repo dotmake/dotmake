@@ -6,6 +6,7 @@ var gulpJshint = require('gulp-jshint');
 
 var promisifyGulpStream = require('./src/promisifyGulpStream');
 var createMysqlInstance = require('./src/createMysqlInstance');
+var createRailsInstance = require('./src/createRailsInstance');
 
 function codeIsJSHinted(src) {
     console.log('jsHinting!');
@@ -17,6 +18,10 @@ function codeIsJSHinted(src) {
 //     console.log('done!', state);
 // });
 
-createMysqlInstance().then(function (state) {
-    console.log('done!', state);
+// createMysqlInstance().then(function (state) {
+//     console.log('done!', state);
+// });
+
+createRailsInstance('example/todomvc').then(function (state) {
+    console.log('done Rails!', state);
 });
