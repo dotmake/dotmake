@@ -7,6 +7,8 @@
     "bluebird": "~2.9.8",
     "gulp-jshint": "~1.9.2",
     "gulp": "~3.8.11",
-    "event-stream": "~3.2.2"
+    "event-stream": "~3.2.2",
+    "tar-stream": "~1.1.2",
+    "MD5": "~1.2.1"
   }
 }
